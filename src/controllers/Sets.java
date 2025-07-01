@@ -84,4 +84,35 @@ public class Sets {
         return palabrasTree;
     }
     
+    public Set<String> construirTreeSetConComparadorInverso(){
+        //Crear Comparador
+        Comparator<String> comparadorLongitud = new Comparator<String>() {
+            @Override
+           public int compare(String s1, String s2){
+            //Comparar la longiud
+            int longitud = Integer.compare(s2.length(), s1.length()); // mayor a menor
+            
+            //Si tiene misma longitud
+            if(longitud==0){
+                return s2.compareTo(s1); // orden lexicográfico inverso
+            }
+
+            return longitud;
+           } 
+        };
+        
+        Set<String> palabrasTree = new TreeSet<>(comparadorLongitud);
+        
+        palabrasTree.add("Laptop");
+        palabrasTree.add("Manzana");
+        palabrasTree.add("Pera");
+        palabrasTree.add("Celular");
+        palabrasTree.add("Laptop");
+        palabrasTree.add("Pera");
+        palabrasTree.add("Laptop");
+        palabrasTree.add("Celulas");
+
+        return palabrasTree;
+    }
+    
 }

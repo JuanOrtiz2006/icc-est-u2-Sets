@@ -2,11 +2,12 @@ import controllers.Sets;
 public class App {
     public static void main(String[] args) throws Exception {
         Sets conSets = new Sets();
-
+        System.out.println("Juan Pablo Ortiz");
         runHashSet(conSets);
         runLinkedHashSet(conSets);
         runTreeSet(conSets);
         runTreeSetConComparador(conSets);
+        runTreeSetConComparadorInverso(conSets);
     }
 
     public static void runHashSet(Sets sets){
@@ -31,9 +32,16 @@ public class App {
     }
 
     public static void runTreeSetConComparador(Sets sets){
-        System.out.println("-----TreeSet-----");
+        System.out.println("-----TreeSet Comparado-----");
         System.out.println("Elemnentos del TreeSetConComparador");
         System.out.println(sets.construirTreeSetConComparador());
+
+    }
+
+    public static void runTreeSetConComparadorInverso(Sets sets){
+        System.out.println("-----TreeSet Comparado Inverso-----");
+        System.out.println("Elemnentos del TreeSetConComparador");
+        System.out.println(sets.construirTreeSetConComparadorInverso());
 
     }
 
