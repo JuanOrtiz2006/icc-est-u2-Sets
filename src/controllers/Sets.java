@@ -94,7 +94,7 @@ public class Sets {
             
             //Si tiene misma longitud
             if(longitud==0){
-                return s2.compareTo(s1); // orden lexicográfico inverso
+                return s2.compareTo(s1); // orden inverso
             }
 
             return longitud;
