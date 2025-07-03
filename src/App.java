@@ -1,4 +1,5 @@
 import controllers.ContactoController;
+import controllers.Ejercicio;
 import controllers.Sets;
 public class App {
     public static void main(String[] args) throws Exception {
@@ -10,8 +11,10 @@ public class App {
         runTreeSetConComparador(conSets);
         runTreeSetConComparadorInverso(conSets);
         */
-        ContactoController contactoController = new ContactoController();
+        //ContactoController contactoController = new ContactoController();
 
+        Ejercicio ejercicio = new Ejercicio();
+        
     }
 
     public static void runHashSet(Sets sets){
